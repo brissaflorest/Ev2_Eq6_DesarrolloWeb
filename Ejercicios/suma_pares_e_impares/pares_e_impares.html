@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suma Pares e Impares</title>
+</head>
+<body>
+    <h1>Suma Pares e impares</h1>
+    <form action="">
+        <div id="area"></div>
+        <button type="button" onclick="serie()">MOSTRAR SERIE</button>
+    </form>
+
+    <script type="text/JavaScript">
+
+        function serie(){
+                    let bandera = 0; //Ta Apagada bro
+                    let numero;
+                    let sumaPar = 0;
+                    let sumaImpar= 0;
+                    while (bandera == 0) { //Mientras tu bandera este apagada tu sigue pidiendo numeros
+                        let numero = parseInt(prompt('Ingrese un número'));
+
+                        if (numero %  2 == 0) {
+                            //Es par
+                            sumaPar = sumaPar + numero;
+                            console.log(sumaPar)
+                        } else{
+                            //Es impar
+                            sumaImpar = sumaImpar + numero;
+                            console.log(sumaImpar);
+                        }
+
+                        if (numero == 0) {
+                            bandera = 1; //Encendida termina el ciclo
+                        } else{
+                            bandera = 0; //Apagada, ciclo continua
+                        }
+                    }
+                    document.getElementById('area').innerText = 'La suma de los numeros pares es: ' +sumaPar+ ' y la suma de impares es: ' +sumaImpar;
+                }
+    </script>
+</body>
+</html>

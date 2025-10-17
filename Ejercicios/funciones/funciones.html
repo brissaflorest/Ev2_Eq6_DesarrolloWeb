@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <marquee><h1>Funciones de JAVASCRIPT</h1></marquee>
+    <script type="text/JavaScript">
+        document.write('<h3>Funciones Matemáticas</h3>');
+        document.write('Función <b>abs(x)</b> del número -10: <mark>' +Math.abs(-10)+'</mark><br>');
+        document.write('Función <b>ceil(x)</b> del número 3.1416: <mark>' +Math.ceil(3.1416)+'</mark><br>');
+        document.write('Función <b>floor(x)</b> del número 3.1416: <mark>' +Math.floor(3.1416)+'</mark><br>');
+        document.write('Función <b>random</b> me da un numero aleatorio: <mark>' +Math.random() +'</mark><br>');
+        document.write('Función <b>round(x)</b> del número 3.1416: <mark>' +Math.round(3.1416)+'</mark><br>');
+        document.write('Función <b>max</b> entre el 1 al 20: <mark>' +Math.max(1,20)+'</mark><br>');
+        document.write('Función <b>min</b> entre el 1 al 20: <mark>' +Math.min(1,20)+'</mark><br>');
+        document.write('Función <b>E</b> devuelve la constante Euler: <mark>' +Math.E+'</mark><br>');
+        document.write('Función <b>PI</b> devuelve la constante PI: <mark>' +Math.PI+'</mark><br>');
+        document.write('Función <b>cos(x)</b> coseno del numero 24: <mark>' +Math.cos(24)+'</mark><br>');
+        document.write('Función <b>sin(x)</b> seno del numero 24: <mark>' +Math.sin(24)+'</mark><br>');
+        document.write('Función <b>tan(x)</b> tangente del numero 24: <mark>' +Math.tan(24)+'</mark><br>');
+        document.write('Función <b>cbrt(x)</b> la raíz cúbica del numero 24: <mark>' +Math.cbrt(24)+'</mark><br>');
+        document.write('Función <b>sqrt(x)</b> la raíz cuadrada del numero 24: <mark>' +Math.sqrt(24)+'</mark><br>');
+        document.write('Función <b>pow(x,y)</b> el número 5 elevado a la 3: <mark>' +Math.pow(5,3)+'</mark><br>');
+        document.write('Función <b>log(x)</b> el logaritmo natural de 24: <mark>' +Math.log(24)+'</mark><br>');
+        document.write('Función <b>log10(x)</b> el logaritmo base 10 de 24: <mark>' +Math.log10(24)+'</mark><br>');
+        document.write('Función <b>log2(x)</b> el logaritmo base 2 de 24: <mark>' +Math.log2(24)+'</mark><br>');
+        document.write('Función <b>exp(x)</b> la función exponencial de 24: <mark>' +Math.exp(24)+'</mark><br>');
+        document.write('Función <b>sign(x)</b> el signo de 24 (Si es "+" es 1 y si es "-" es 0): <mark>' +Math.sign(24)+'</mark><br>');
+        document.write('Función <b>trunc(x)</b> la parte entera de 24.567: <mark>' +Math.trunc(24.567)+'</mark><br><br>');
+        
+        document.write('<h3>Otras Funciones Numéricas</h3>');
+
+        let valor1 = "Hola";
+        let valorConvertido = Number(valor1); // Intentamos convertir a número
+        document.write('Intentando convertir la cadena "<b>' + valor1 + '</b>" a número: <mark>' + valorConvertido + '</mark><br>');
+        document.write('Función <b>Number.isNaN(x)</b> verifica si el valor no es un número: <mark>' + Number.isNaN(valorConvertido) + '</mark><br>');
+
+        let numeroDecimal = 3.1415926535;
+        document.write('Número original: <mark>' + numeroDecimal + '</mark><br>');
+        document.write('Función <b>toFixed(2)</b> redondea el número a 2 decimales: <mark>' + numeroDecimal.toFixed(2) + '</mark><br>');
+        document.write('Función <b>toFixed(4)</b> redondea el número a 4 decimales: <mark>' + numeroDecimal.toFixed(4) + '</mark><br>');
+
+
+        document.write('<h3>Funciones de Cadenas</h3>');
+        let cadena = "Hola Mundo";
+        document.write('Cadena: <mark>' +cadena+ '</mark><br>');
+        document.write('Función <b>charAt(n)</b> caracter en la posición 5: <mark>' +cadena.charAt(5)+'</mark><br>');
+        
+        document.write('Función <b>toUpperCase(n)</b> Convierte todos los caracteres de la cadena a mayúsculas: <mark>' +cadena.toUpperCase()+'</mark><br>');
+        document.write('Función <b>toLowerCase(n)</b> Convierte todos los caracteres de la cadena a minúsculas: <mark>' +cadena.toLowerCase()+'</mark><br>');
+        document.write('Función <b>concat(n)</b> Concatenar otra cadena a la original: <mark>' +cadena.concat('!!!')+'</mark><br>');
+        document.write('Función <b>slice(inicio,fin)</b> Extrae una sección de la cadena y devuelve una nueva cadena: <mark>' +cadena.slice(0,4)+'</mark><br>');
+        document.write('Función <b>substring(inicio,fin)</b> Extrae los caracteres desde el inicio hasta el fin (no incluye el caracter en la posición fin): <mark>' +cadena.substring(0,3)+'</mark><br>');
+        document.write('Función <b>indexOf(n)</b> Devuelve la posición de la primera aparición de un valor especificado en una cadena: <mark>' +cadena.indexOf('o')+'</mark><br>');
+        document.write('Función <b>lastIndexOf(n)</b> Devuelve la posición de la última aparición de un valor especificado en una cadena: <mark>' +cadena.lastIndexOf('o')+'</mark><br>');
+        document.write('Función <b>replace(n,m)</b> Reemplaza un valor especificado por otro en una cadena: <mark>' +cadena.replace('Mundo','Amigo')+'</mark><br>');
+        document.write('Función <b>split(n)</b> Divide una cadena en un array de subcadenas: <mark>' +cadena.split(' ')+'</mark>');
+        document.write('Función <b>trim()</b> Elimina los espacios en blanco de ambos extremos de una cadena: <mark>' +"   "+cadena+"   "+'</mark> --> <mark>' +cadena.trim()+'</mark><br>');
+        document.write('Función <b>length</b> Devuelve la longitud de una cadena: <mark>' +cadena.length+'</mark><br><br>');
+        document.write('<h3>Funciones de Fechas</h3>');
+        let fecha = new Date();
+        document.write('Fecha Actual: <mark>' +fecha+ '</mark><br>');
+        document.write('Función <b>getDate()</b> Día del mes (1-31): <mark>' +fecha.getDate()+'</mark><br>');
+        document.write('Función <b>getDay()</b> Día de la semana (0-6): <mark>' +fecha.getDay()+'</mark><br>');
+        document.write('Función <b>getMonth()</b> Mes (0-11): <mark>' +fecha.getMonth()+'</mark><br>');
+        document.write('Función <b>getHours()</b> Horas (0-23): <mark>' +fecha.getHours()+'</mark><br>');
+        document.write('Función <b>getMinutes()</b> Minutos (0-59): <mark>' +fecha.getMinutes()+'</mark><br>');
+        document.write('Función <b>getSeconds()</b> Segundos (0-59): <mark>' +fecha.getSeconds()+'</mark><br>');
+        document.write('Función <b>getFullYear()</b> Año: <mark>' +fecha.getFullYear()+'</mark><br>');
+        document.write('Función <b>toDateString()</b> Convierte la fecha a una cadena legible: <mark>' +fecha.toDateString()+'</mark><br>');
+        document.write('Función <b>toTimeString()</b> Convierte la hora a una cadena legible: <mark>' +fecha.toTimeString()+'</mark><br>');
+        document.write('Función <b>toLocaleDateString()</b> Convierte la fecha a una cadena legible en formato local: <mark>' +fecha.toLocaleDateString()+'</mark><br>');
+        document.write('Función <b>toLocaleTimeString()</b> Convierte la hora a una cadena legible en formato local: <mark>' +fecha.toLocaleTimeString()+'</mark><br>');
+        document.write('<h3>Funciones de Array</h3>');
+        let array = [5,10,15,20,25];
+        document.write('Array: <mark>' +array+ '</mark><br>');
+        document.write('Función <b>push(n)</b> Agrega un elemento al final del array: <mark>' +array.push(30)+ '</mark> --> <mark>' +array+ '</mark><br>');
+        document.write('Función <b>pop()</b> Elimina el último elemento del array: <mark>' +array.pop()+ '</mark> --> <mark>' +array+ '</mark><br>');
+        document.write('Función <b>shift()</b> Elimina el primer elemento del array: <mark>' +array.shift()+ '</mark> --> <mark>' +array+ '</mark><br>');
+        document.write('Función <b>unshift(n)</b> Agrega un elemento al inicio del array: <mark>' +array.unshift(1)+ '</mark> --> <mark>' +array+ '</mark><br>');
+        document.write('Función <b>indexOf(n)</b> Devuelve la posición de la primera aparición de un valor especificado en un array: <mark>' +array.indexOf(15)+ '</mark><br>');
+        document.write('Función <b>lastIndexOf(n)</b> Devuelve la posición de la última aparición de un valor especificado en un array: <mark>' +array.lastIndexOf(15)+ '</mark><br>');
+        document.write('Función <b>join(n)</b> Une todos los elementos de un array en una cadena: <mark>' +array.join('-')+ '</mark><br>');
+        document.write('Función <b>slice(inicio,fin)</b> Extrae una sección de un array y devuelve un nuevo array: <mark>' +array.slice(1,4)+ '</mark><br>');
+        document.write('Función <b>splice(inicio,numero)</b> Elimina elementos de un array y, si es necesario, inserta nuevos elementos en su lugar: <mark>' +array.splice(1,2)+ '</mark> --> <mark>' +array+ '</mark><br>');
+        document.write('Función <b>sort()</b> Ordena los elementos de un array: <mark>' +array.sort()+ '</mark><br>');
+        document.write('Función <b>reverse()</b> Invierte el orden de los elementos de un array: <mark>' +array.reverse()+ '</mark><br>');
+        document.write('Función <b>length</b> Devuelve la longitud de un array: <mark>' +array.length+ '</mark><br>');
+        document.write('Función <b>toString()</b> Convierte un array en una cadena: <mark>' +array.toString()+ '</mark><br>');
+        document.write('Función <b>includes(n)</b> Determina si un array incluye un determinado elemento: <mark>' +array.includes(10)+ '</mark><br>');
+        document.write('Función <b>filter(n)</b> Crea un nuevo array con todos los elementos que cumplan la condición implementada por la función dada: <mark>' +array.filter(num => num > 10)+ '</mark><br>');
+        
+
+    </script>
+</body>
+</html>

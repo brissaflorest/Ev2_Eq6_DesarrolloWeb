@@ -6,68 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <title>Ejercicio 4</title>
+    <title>Ejercicio 5</title>
 </head>
 
 <body>
     <h1>Ejemplo tabla</h1>
     <form action="">
         <div id="area"></div>
-        <button type="button" onclick="dataGridView()">MOSTRAR SERIE</button>
+        <button type="button" onclick="dataGridView()">REGISTRAR NOMBRES</button>
     </form>
 
     <script type="text/JavaScript">
-        /*function serie() {
-            
-            let i = 100
-            let texto;
-            while(i != 0){
-                texto += i + '<br> <hr>';
-                i --;
-            }
-            document.getElementById('area').innerHTML = texto;
-        }
-            */
-
-        /*function serie(){
-            let bandera = 0; //Ta Apagada bro
-            while (bandera == 0) { //Mientras tu bandera este apagada tu sigue pidiendo numeros
-                let numero = parseInt(prompt('Ingrese un número'));
-
-                if (numero == 0) {
-                    bandera = 1; //Encendida termina el ciclo
-                    document.write('TERMINAMOS EAEAEA');
-                } else{
-                    bandera = 0; //Apagada, ciclo continua
-                }
-            }*/
-        function serie(){
-            let bandera = 0; //Ta Apagada bro
-            let numero;
-            let sumaPar = 0;
-            let sumaImpar= 0;
-            while (bandera == 0) { //Mientras tu bandera este apagada tu sigue pidiendo numeros
-                let numero = parseInt(prompt('Ingrese un número'));
-
-                if (numero %  2 == 0) {
-                    //Es par
-                    sumaPar = sumaPar + numero;
-                    console.log(sumaPar)
-                } else{
-                    //Es impar
-                    sumaImpar = sumaImpar + numero;
-                    console.log(sumaImpar);
-                }
-
-                if (numero == 0) {
-                    bandera = 1; //Encendida termina el ciclo
-                } else{
-                    bandera = 0; //Apagada, ciclo continua
-                }
-            }
-            document.getElementById('area').innerText = 'La suma de los numeros pares es: ' +sumaPar+ ' y la suma de impares es: ' +sumaImpar;
-        }
-
+        
         function dataGridView() {
             let numElementos;
             let nombre;
@@ -175,5 +125,6 @@
         
     </script>
 </body>
+
 
 </html>

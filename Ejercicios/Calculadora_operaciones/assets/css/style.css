@@ -1,0 +1,37 @@
+body{
+    background-color: #567C8D;
+}
+
+.container{
+    background-color: #ffffff;
+}
+
+
+h2{
+    font-family: "Overpass", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+label{
+    font-family: "Overpass", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #2f4156;
+    font-size: large;
+}
+
+
+#chkProgramacion, #chkBasedeDatos, #chkDesarrolloWeb{
+    font-family: "Overpass", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: large
+}
+
+#chkProgramacion:hover, #chkBasedeDatos:hover, #chkDesarrolloWeb:hover{
+    color: #2f4156;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es" translate="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Ejercicio 5</title>
+</head>
+
+<body>
+    <h1>Ejemplo tabla</h1>
+    <form action="">
+        <div id="area"></div>
+        <button type="button" onclick="dataGridView()">REGISTRAR NOMBRES</button>
+    </form>
+
+    <script type="text/JavaScript">
+        
+        function dataGridView() {
+            let numElementos;
+            let nombre;
+            let tabla = '<table class="table table-striped table-bordered table-hover text-center align-middle"> ' +
+                '<tr>' + 
+                    '<th>  Id </th>'+
+                    '<th> Nombre </th>' + 
+                    '<th> Boton Editar </th>' +
+                    '<th> Boton Eliminar </th>' +
+                '</tr>' ;
+            let nombresRegistrados = []; /* Esta variable servira para validadr que no se ingreses 2 nombres iguales*/
+
+                numElementos= parseInt(prompt('Ingrese un el numero de elementos que desea registrar:'));
+                if (isNaN(numElementos) || numElementos <= 0) {
+                    alert('Por favor, ingrese un número válido.');
+                    return;
+                }
+                for (let i = 1; i <= numElementos; i++) {
+                    nombre = prompt("Ingrese el Nombre:");
+
+                    if (nombresRegistrados.includes(nombre)) {
+                    alert(' El nombre "' + nombre + '" ya fue ingresado. Intenta con otro.');
+                    i--; // repetimos el ciclo actual
+                    continue;
+                    }
+
+                    // Validar nombre vacío o cancelado
+                    if (!nombre || nombre.trim() === "") {
+                    alert("El nombre no puede estar vacío.");
+                    i--;
+                    continue;
+                    }
+
+                    // Guardar nombre en el arreglo
+                    nombresRegistrados.push(nombre.trim());
+
+                        
+                        tabla += `
+                            <tr>
+                                <td>${i}</td>
+                                <td>${nombre}</td>
+                                <td>
+                                <button type="button" class="btn btn-success editar" data-id="${i}">EDITAR</button>
+                                </td>
+                                <td>
+                                <button type="button" class="btn btn-warning eliminar" data-id="${i}">ELIMINAR</button>
+                                </td>
+                            </tr>
+                            `;          /* Reemplaze las comillas simples por backticks para que el id si se vea */      
+            }
+
+            tabla += '</table>';
+            document.getElementById('area').innerHTML = tabla;
+
+            /* El event listener nos permitira delegar eventos detectando que boton fue presionado*/
+            document.getElementById('area').addEventListener('click', function (event) {     /* addEventListener dice Oye, escucha cuando alguien haga clic dentro del div area y Cuando se detecta un clic en cualquier parte dentro de ese div, se ejecuta la función que pusiste como segundo parámetro (la “callback”).*/
+                const target = event.target; /* Guarda en la variable target el elemento exacto donde se hizo clic*/
+                console.log(event.target);
+
+
+                if (target.classList.contains('eliminar')) {
+                    // Si el clic vino de un botón con clase "eliminar"
+                    console.log('Se hizo clic en ELIMINAR, id:', target.dataset.id);
+                    const fila = target.closest('tr'); //Encuentra la fila <tr> del botón clicado
+                    const nombre = fila.children[1].textContent; //selecciona la segunda celda esa fila, donde está el nombre (posición [1]).
+                    if (confirm(`¿Seguro que quieres eliminar a "${nombre}"?`)) {
+                    fila.remove(); 
+                    // quitar también el nombre del arreglo
+                    nombresRegistrados = nombresRegistrados.filter(n => n !== nombre);
+                    }
+                }
+
+                  //  Editar nombre
+                if (target.classList.contains('editar')) {
+                    // Si el clic vino de un botón con clase "editar"
+                    console.log('Se hizo clic en EDITAR, id:', target.dataset.id);
+                    const fila = target.closest('tr'); //Encuentra la fila <tr> del botón clicado
+                    const celdaNombre = fila.children[1]; //selecciona la segunda celda de esa fila, donde está el nombre (posición [1]).
+                    const nombreActual = celdaNombre.textContent; //guardamos el contenido de esa celda en esta variable
+                    const nuevoNombre = prompt("Nuevo nombre:", nombreActual);
+
+                    if (!nuevoNombre || nuevoNombre.trim() === "") { //!nuevoNombre verifica si el usuario presionó “Cancelar” y nuevoNombre.trim() === "" revisa si solo escribió espacios.
+                    alert("El nombre no puede estar vacío.");
+                    return;
+                    }
+
+                    if (nombresRegistrados.includes(nuevoNombre.trim())) { //revisamos si el nuevo nombre ya existe en el arreglo nombresRegistrados.
+                    alert(" Ese nombre ya existe. Intenta con otro.");
+                    return;
+                    }
+
+                    // Actualizamos la lista de nombres
+                    const indice = nombresRegistrados.indexOf(nombreActual); //indexOf Busca el valor en el arreglo y devuelve su posición
+                    if (indice !== -1) {   //si indexOf devuelve -1 Significa que no lo entrontro por eso si es distinto a eso ahora si actualiza el arreglo
+                    nombresRegistrados[indice] = nuevoNombre.trim();
+                    }
+
+                    //Toma el texto nuevo que el usuario ingresó, quítale los espacios sobrantes, y muéstralo en la celda nombre de la tabla
+                    celdaNombre.textContent = nuevoNombre.trim();
+                }
+                
+            });
+            
+        }
+        
+    </script>
+</body>
+
+
+</html>

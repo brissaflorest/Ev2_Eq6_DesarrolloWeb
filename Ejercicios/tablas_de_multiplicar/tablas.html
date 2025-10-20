@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <h1>Estructura for</h1>
+    <form action="">
+        <input id="txtNumero" type="number" name="txtNumero" placeholder="Ingrese un número">
+        <button type="button" onclick="tabla()">MOSTRAR TABLA</button>
+
+        <div id="resultado"></div>
+    </form>
+
+    <script type="text/JavaScript">
+        function tabla() {
+            
+            let num = parseInt(document.getElementById("txtNumero").value);
+            let resultado;
+            let tabla = '<table class="table table-striped table-bordered table-hover text-center align-middle"> ' +
+                '<tr>' + 
+                    '<th>  Numero 1 </th>'+
+                    '<th> Numero 2 </th>' + 
+                    '<th> Resultado </th>' +
+                '</tr>' ;
+
+            for (let i = 1; i <= 10; i++) {
+                resultado = num * i;
+                tabla += `
+                            <tr>
+                                <td>${num}</td>
+                                <td>${i}</td>
+                                <td>${resultado}</td>
+                            </tr>
+                            `;   
+            }
+
+            tabla += '</table>';
+            document.getElementById('resultado').innerHTML = tabla;
+        }
+    </script>
+</body>
+</html>

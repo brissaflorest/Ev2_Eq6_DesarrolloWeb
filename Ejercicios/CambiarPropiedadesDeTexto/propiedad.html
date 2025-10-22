@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Propiedades de Texto</title>
+</head>
+
+<body>
+    <p class="pregunta" onclick="cambiarTamaño(this)">
+        Haz clic en este texto para cambiar su tamaño.
+    </p>
+
+    <script>
+        function cambiarTamaño(elemento) {
+            // Alterna entre dos tamaños: grande y normal
+            if (elemento.style.fontSize === '24px') {
+                elemento.style.fontSize = '16px';
+            } else {
+                elemento.style.fontSize = '24px';
+            }
+        }
+    </script>
+</body>
+</html>

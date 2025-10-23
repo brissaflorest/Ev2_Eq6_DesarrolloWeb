@@ -25,33 +25,6 @@ h3 {
   padding-bottom: 4px;
 }
 
-.text-rosita {
-  color: #0c969c;
-}
-
-.btn-outline-rosita {
-  color: #0c969c;
-  border: 1px solid #0c969c;
-  background-color: transparent;
-  transition: all 0.3s ease;
-}
-
-.btn-outline-rosita:hover {
-  background-color: #0c969c;
-  color: white;
-  box-shadow: 0 0 10px #274d60;
-}
-
-.btn-kawaii {
-  background-color: transparent;
-  transition: all 0.3s ease;
-}
-
-.btn-kawaii:hover {
-  color: white;
-  box-shadow: 0 0 10px rgba(255, 204, 224, 0.6);
-}
-
 code {
   background-color: #032f30;
   border-radius: 5px;
@@ -59,6 +32,39 @@ code {
   padding: 10px;
   font-family: 'Courier New', monospace;
   color: #0c969c;
+}
+
+.btn-kawaii1 {
+  background-color: #17876D;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.btn-kawaii1:hover {
+  color: black;
+  box-shadow: 0 0 20px #17876D;
+}
+
+.btn-kawaii2 {
+  background-color: #391787;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.btn-kawaii2:hover {
+  color: black;
+  box-shadow: 0 0 20px #391787;
+}
+
+.btn-kawaii3 {
+  background-color: #54ACBF;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.btn-kawaii3:hover {
+  color: black;
+  box-shadow: 0 0 20px #54ACBF;
 }
 
 a {
@@ -71,27 +77,11 @@ a:hover {
   text-decoration: underline;
 }
 
-.contenedor-imagen img {
-  width: 15.625rem;
-  height: 15.625rem;
-  object-fit: cover;
-  border: none;
-  border-radius: 100%;
-  box-shadow: 0 4px 12px rgba(10, 112, 117, 0.6);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.contenedor-imagen img:hover {
-  transform: scale(1.1) rotate(3deg);
-  box-shadow: 0 8px 20px rgba(10, 112, 117, 0.9);
-}
-
-.bg-rosita {
-  background-color: #032f30;
-  color: #6ba3be;
-  text-align: center;
-  padding: 1rem 0;
-  margin-top: 2rem;
+.color-footer {
+    background-color: rgba(6, 91, 95, 0.884);
+    color: white;
+    padding: 10px;
+    text-align: center;
 }
 
 /*------------------SCROLLBAR-------------------*/
@@ -123,41 +113,9 @@ a:hover {
     scale: 1.09;
 }
 
-.js-section {
-  background-color: #031716;
-  border-left: 5px solid #0c969c;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 2rem;
-}
-
-.js-code {
-  background-color: #031716;
-  color: #0c969c;
-  font-family: 'Courier New', monospace;
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 1rem;
-  overflow-x: auto;
-}
-
-.card-ejercicio {
-  border: 2px dashed #0a7075;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-
-.card-ejercicio:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 15px rgba(10, 112, 117, 0.4);
-}
-
 #shadow_caja:hover {
   box-shadow: 0 4px 12px rgba(10, 112, 117, 0.4);
-
-
 }
-
 
 .boton_ejercicio {
   background-color: rgba(6, 91, 95, 0.884);

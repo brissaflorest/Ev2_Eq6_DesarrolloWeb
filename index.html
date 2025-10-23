@@ -13,7 +13,9 @@
 </head>
 
 <body>
-    <a href="#indice"><abbr title="Volver al indice"><p id="vuelta-indice">🌸</p></abbr></a>
+    <a href="#indice"><abbr title="Volver al indice">
+            <p id="vuelta-indice">🌑</p>
+        </abbr></a>
     <header class="header-kawaii text-center p-3">
         <h1 class="display-4 fw-bold">🌐 Sitio Web de Desarrollo Web</h1>
         <p class="lead">Fundamentos, estructura y estilo para crear sitios hermosos</p>
@@ -24,9 +26,12 @@
             <div class="card-body">
                 <h5 class="card-title text-center mb-3">Índice de Contenidos</h5>
                 <ul class="list-unstyled d-flex flex-wrap justify-content-center gap-3">
-                    <li><a href="#introduccion-js" class="btn btn-outline-primary btn-sm btn-kawaii">Introducción a JavaScript</a></li>
-                    <li><a href="#conceptos-js" class="btn btn-outline-success btn-sm btn-kawaii">Conceptos Clave</a></li>
-                    <li><a href="#ejercicios" class="btn btn-outline-danger btn-sm btn-kawaii">Ejercicios Prácticos</a></li>
+                    <li><a href="#introduccion-js" class="btn btn-outline-primary btn-sm btn-kawaii">Introducción a
+                            JavaScript</a></li>
+                    <li><a href="#conceptos-js" class="btn btn-outline-success btn-sm btn-kawaii">Conceptos Clave</a>
+                    </li>
+                    <li><a href="#ejercicios" class="btn btn-outline-danger btn-sm btn-kawaii">Ejercicios Prácticos</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -35,175 +40,330 @@
     <main class="container mt-4">
         <!-- Sección 1: Introducción -->
         <section id="introduccion-js" class="mb-5">
-            <h2 class="text-primary">¿Qué es JavaScript?</h2>
-            <p>JavaScript es un lenguaje de programación interpretado, ligero y multiparadigma, diseñado para crear páginas web interactivas. Se ejecuta directamente en el navegador, permitiendo que los sitios respondan a acciones del usuario sin recargar la página.</p>
+            <h2 class="text-JAVASCRIPT">Definición, historia y características de JavaScript</h2>
+            <p>JavaScript es un lenguaje de programación interpretado, ligero y multiparadigma, diseñado para crear
+                páginas web interactivas. Se ejecuta directamente en el navegador, permitiendo que los sitios respondan
+                a acciones del usuario sin recargar la página.</p>
+            <p>JavaScript fue creado en 1995 por Brendan Eich mientras trabajaba en Netscape Communications. Su objetivo
+                era dotar a los navegadores de una forma de programar comportamientos dinámicos. Inicialmente se llamó
+                LiveScript, pero fue renombrado a JavaScript por motivos comerciales, aunque no tiene relación directa
+                con el lenguaje Java.</p>
+            <p>Con el tiempo, se estandarizó bajo el nombre ECMAScript (por ECMA International), siendo ECMAScript 6
+                (ES6) una de las versiones más importantes, que introdujo mejoras como let, const, clases y funciones
+                flecha.</p>
+            <p><b>Entre sus Características encotramos lo siguiente:</b></p>
             <ul>
                 <li><strong>Lenguaje interpretado:</strong> No necesita compilación previa.</li>
-                <li><strong>Multiparadigma:</strong> Soporta programación orientada a objetos, funcional y estructurada.</li>
+                <li><strong>Multiparadigma:</strong> Soporta programación orientada a objetos, funcional y estructurada.
+                </li>
                 <li><strong>Ejecutado en el cliente:</strong> Corre en el navegador del usuario.</li>
-                <li><strong>Aplicaciones comunes:</strong> Validación de formularios, animaciones, juegos, interacciones dinámicas.</li>
+                <li><strong>Aplicaciones comunes:</strong> Validación de formularios, animaciones, juegos, interacciones
+                    dinámicas.</li>
+                <li><strong>Flexible y dinámico:</strong> Permite cambiar el contenido en tiempo real.</li>
             </ul>
             <p>Explora más en estos sitios:</p>
             <ul>
-                <li><a href="https://developer.mozilla.org/es/docs/Learn_web_development/Core/Scripting/What_is_JavaScript" target="_blank">MDN: ¿Qué es JavaScript?</a></li>
-                <li><a href="https://platzi.com/blog/javascript-conceptos-basicos/" target="_blank">Platzi: Conceptos básicos</a></li>
-                <li><a href="https://bluuweb.dev/04-javascript/bases.html" target="_blank">Bluuweb: Bases de JavaScript</a></li>
+                <li><a href="https://developer.mozilla.org/es/docs/Learn_web_development/Core/Scripting/What_is_JavaScript"
+                        target="_blank">MDN: ¿Qué es JavaScript?</a></li>
+                <li><a href="https://platzi.com/blog/javascript-conceptos-basicos/" target="_blank">Platzi: Conceptos
+                        básicos</a></li>
+                <li><a href="https://bluuweb.dev/04-javascript/bases.html" target="_blank">Bluuweb: Bases de
+                        JavaScript</a></li>
+            </ul>
+        </section>
+
+        <!-- Sección 2: Incorporacion -->
+        <section id="conceptos-js" class="mb-5">
+            <h2 class="text-CONCEPTOS">Incorporar JavaScript a una página web</h2>
+            <p>JavaScript puede integrarse en una página HTML de tres maneras:</p>
+            <ul>
+                <li><strong>Interno:</strong> <code>&lt;script&gt;alert("Hola Mundo");&lt;/script&gt;</code></li>
+                <li><strong>Externo:</strong> <code>&lt;script src="script.js"&gt;&lt;/script&gt;</code></li>
+                <li><strong>En línea:</strong>
+                    <code>&lt;button onclick="alert('Hola')"&gt;Haz clic&lt;/button&gt;</code>
+                </li>
             </ul>
         </section>
 
         <!-- Sección 2: Conceptos -->
         <section id="conceptos-js" class="mb-5">
-            <h2 class="text-success">Conceptos Fundamentales</h2>
+            <h2 class="text-CONCEPTOS">Conceptos Fundamentales</h2>
             <ul>
-                <li><strong>Variables:</strong> <code>let</code>, <code>const</code>, <code>var</code></li>
-                <li><strong>Tipos de datos:</strong> String, Number, Boolean, Array, Object</li>
-                <li><strong>Funciones:</strong> Tradicionales y flecha (<code>() => {}</code>)</li>
-                <li><strong>Condicionales:</strong> <code>if</code>, <code>else</code>, <code>switch</code></li>
-                <li><strong>Bucles:</strong> <code>for</code>, <code>while</code>, <code>forEach</code></li>
-                <li><strong>Eventos:</strong> <code>onclick</code>, <code>onchange</code>, <code>onmouseover</code></li>
-                <li><strong>Manipulación del DOM:</strong> <code>document.querySelector</code>, <code>innerHTML</code></li>
-                <li><strong>Promesas y async/await:</strong> Para manejar operaciones asincrónicas</li>
+                <li>
+                    <h4><strong>Comentarios:</strong></h4>
+                    <p>Sirven para documentar el código o desactivar partes temporalmente.</p>
+                    <p><code>// Comentario de una línea</code><br>
+                        <code>/* Comentario de varias líneas */</code>
+                    </p>
+                </li><br>
+                <li>
+                    <h4><strong>Comunicación con el usuario:</strong></h4>
+                    <p>JavaScript puede mostrar mensajes o solicitar datos con:</p>
+                    <p><code>alert("Mensaje")</code><br>
+                        <code>confirm("¿Deseas continuar?")</code><br>
+                        <code>prompt("Ingresa tu nombre:")</code>
+                    </p>
+                </li><br>
+
+                <li>
+                    <h4><strong>Expresiones:</strong></h4>
+                    <p>Una expresión combina valores, variables y operadores para producir un resultado.</p>
+                    <p><code>let total = precio * cantidad + impuesto;</code></p>
+                </li><br>
+
+                <li>
+                    <h4><strong>Objetos String:</strong></h4>
+                    <p>Los strings son cadenas de texto. Algunos métodos útiles son:</p>
+                    <p><code>texto.length</code> Devuelve la longitud<br>
+                        <code>texto.toUpperCase()</code> Convierte a mayúsculas<br>
+                        <code>texto.includes("Script")</code> Busca una subcadena
+                    </p>
+                </li><br>
+
+                <li>
+                    <h4><strong>Variables:</strong></h4>
+                    <p>Se usan para almacenar información:</p>
+                    <p><code>let nombre = "Sergio";<br>
+                        const PI = 3.1416;<br>
+                        var edad = 20;</code>
+                    </p>
+                </li><br>
+
+                <li>
+                    <h4><strong>Estructuras de decisión y control:</strong></h4>
+                    <p>Permiten ejecutar código según condiciones o repetir acciones.</p>
+                    <p><code>if (edad >= 18) { alert("Mayor de edad"); } else { alert("Menor de edad"); }</code></p>
+                    <p><code>for (let i = 1; i &lt;= 5; i++) { console.log(i); }</code></p>
+                </li><br>
+
+                <li>
+                    <h4><strong>Funciones intrínsecas:</strong></h4>
+                    <p>Son funciones integradas del lenguaje, como:</p>
+                    <p><code>parseInt()</code><br> <code>Math.random()</code><br> <code>Date()</code></p>
+                </li><br>
+
+                <li>
+                    <h4><strong>Funciones definidas por el usuario:</strong></h4>
+                    <p>El programador puede crear sus propias funciones:</p>
+                    <p><code>function saludar(nombre) { return "Hola, " + nombre; }</code></p>
+                </li><br>
+
+                <li>
+                    <h4><strong>El Document Object Model (DOM):</strong></h4>
+                    <p>El DOM representa la estructura del documento HTML y permite modificar elementos.</p>
+                    <p><code>document.getElementById("titulo").innerHTML = "Nuevo título"; <br></code></p>
+                </li><br>
+
+                <li>
+                    <h4><strong>Manejo de eventos:</strong></h4>
+                    <p>JavaScript puede responder a acciones del usuario mediante eventos:</p>
+                    <p><code>elemento.addEventListener("click", function() { alert("Clic!"); });</code></p>
+                </li><br>
+
+                <li>
+                    <h4><strong>Accesar a elementos en el cliente:</strong></h4>
+                    <p>Para manipular elementos HTML:</p>
+                    <p><code>document.querySelector("p").style.color = "blue";<br>
+                        document.getElementsByClassName("item");<br>
+                        document.getElementsByTagName("div");</code>
+                    </p>
+                </li> <br>
+
+                <li>
+                    <h4><strong>Tipos de datos:</strong></h4> String, Number, Boolean, Array, Object
+                </li> <br>
+
+                <li>
+                    <h4><strong>Herramientas de los navegadores para el desarrollador:</strong></h4>
+                    <p>Los navegadores incluyen DevTools, accesibles con F12 o clic derecho → Inspeccionar. Permiten ver
+                        el DOM, depurar código, analizar rendimiento y red.</p>
+                </li> <br>
+
+                <li>
+                    <h4><strong>Lectura de datos en el cliente:</strong></h4>
+                    <p>JavaScript puede leer datos desde formularios:</p>
+                    <p><code>let nombre = document.getElementById("nombre").value;</code></p>
+                    <p>También puede almacenar información temporal con <code>localStorage</code> y
+                        <code>sessionStorage</code>.
+                    </p>
+                </li> <br>
+
+                <li>
+                    <h4><strong>Validaciones en el cliente:</strong></h4>
+                    <p>Antes de enviar un formulario, se puede verificar que los campos estén correctos:</p>
+                    <p><code>function validar() { let correo = document.getElementById("email").value; if (correo === "") { alert("El campo correo es obligatorio"); return false; } return true; }</code>
+                    </p>
+                </li> <br>
+
+                <li>
+                    <h4><strong>Condicionales:</strong></h4> <code>if</code>, <code>else</code>, <code>switch</code>
+                </li> <br>
+                <li>
+                    <h4><strong>Bucles:</strong></h4> <code>for</code>, <code>while</code>, <code>forEach</code>
+                </li> <br>
+                <li>
+                    <h4><strong>Eventos:</strong></h4> <code>onclick</code>, <code>onchange</code>,
+                    <code>onmouseover</code>
+                </li> <br>
+                
+                <li>
+                    <h4><strong>Promesas y async/await:</strong></h4> Para manejar operaciones asincrónicas
+                </li>
             </ul>
         </section>
 
         <!-- Sección 3: CSS -->
         <section id="ejercicios" class="mb-5">
-            <h2 class="text-danger">Ejercicios Prácticos</h2>
+            <h2 class="text-EJERCICIOS">Ejercicios Prácticos</h2>
             <p>Haz clic en cada tarjeta para explorar los ejercicios desarrollados por el equipo:</p>
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 <div class="col">
-                <div class="card h-100">
-                    <div class="card-body">
-                    <h5 class="card-title">Ejercicio 1: Calculadora de operaciones básicas</h5>
-                    <a href="https://brissaflorest.github.io/Ev2_Eq6_DesarrolloWeb/Ejercicios/Calculadora_operaciones/Calculadora.html" target="_blank" class="btn bg-rosita">Ver ejercicio</a>
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Ejercicio 1: Calculadora de operaciones básicas</h5>
+                            <a href="https://brissaflorest.github.io/Ev2_Eq6_DesarrolloWeb/Ejercicios/Calculadora_operaciones/Calculadora.html"
+                                target="_blank" class="btn bg-rosita">Ver ejercicio</a>
+                        </div>
                     </div>
-                </div>
-                </div>
-                
-                <div class="col">
-                <div class="card h-100">
-                    <div class="card-body">
-                    <h5 class="card-title">Ejercicio 2: Tablas de multiplicar</h5>
-                    <a href="https://brissaflorest.github.io/Ev2_Eq6_DesarrolloWeb/Ejercicios/tablas_de_multiplicar/tablas.html" target="_blank" class="btn bg-rosita">Ver ejercicio</a>
-                    </div>
-                </div>
                 </div>
 
                 <div class="col">
-                <div class="card h-100">
-                    <div class="card-body">
-                    <h5 class="card-title">Ejercicio 3: Tipo de triangulo según sus lados</h5>
-                    <a href="https://brissaflorest.github.io/Ev2_Eq6_DesarrolloWeb/Ejercicios/TipoDeTriangulo/TipoDeTriangulo.html" target="_blank" class="btn bg-rosita">Ver ejercicio</a>
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Ejercicio 2: Tablas de multiplicar</h5>
+                            <a href="https://brissaflorest.github.io/Ev2_Eq6_DesarrolloWeb/Ejercicios/tablas_de_multiplicar/tablas.html"
+                                target="_blank" class="btn bg-rosita">Ver ejercicio</a>
+                        </div>
                     </div>
-                </div>
                 </div>
 
                 <div class="col">
-                <div class="card h-100">
-                    <div class="card-body">
-                    <h5 class="card-title">Ejercicio 4: Validar suma de pares e impares</h5>
-                    <a href="https://brissaflorest.github.io/Ev2_Eq6_DesarrolloWeb/Ejercicios/suma_pares_e_impares/pares_e_impares.html" target="_blank" class="btn bg-rosita">Ver ejercicio</a>
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Ejercicio 3: Tipo de triangulo según sus lados</h5>
+                            <a href="https://brissaflorest.github.io/Ev2_Eq6_DesarrolloWeb/Ejercicios/TipoDeTriangulo/TipoDeTriangulo.html"
+                                target="_blank" class="btn bg-rosita">Ver ejercicio</a>
+                        </div>
                     </div>
-                </div>
                 </div>
 
                 <div class="col">
-                <div class="card h-100">
-                    <div class="card-body">
-                    <h5 class="card-title">Ejercicio 5: Tabla de registros</h5>
-                    <a href="https://brissaflorest.github.io/Ev2_Eq6_DesarrolloWeb/Ejercicios/Tabla_estilo_django/tabla_nombres.html" target="_blank" class="btn bg-rosita">Ver ejercicio</a>
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Ejercicio 4: Validar suma de pares e impares</h5>
+                            <a href="https://brissaflorest.github.io/Ev2_Eq6_DesarrolloWeb/Ejercicios/suma_pares_e_impares/pares_e_impares.html"
+                                target="_blank" class="btn bg-rosita">Ver ejercicio</a>
+                        </div>
                     </div>
-                </div>
                 </div>
 
                 <div class="col">
-                <div class="card h-100">
-                    <div class="card-body">
-                    <h5 class="card-title">Ejercicio 6: Laboratorio de funciones predeterminadas</h5>
-                    <a href="https://brissaflorest.github.io/Ev2_Eq6_DesarrolloWeb/Ejercicios/funciones/funciones.html" target="_blank" class="btn bg-rosita">Ver ejercicio</a>
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Ejercicio 5: Tabla de registros</h5>
+                            <a href="https://brissaflorest.github.io/Ev2_Eq6_DesarrolloWeb/Ejercicios/Tabla_estilo_django/tabla_nombres.html"
+                                target="_blank" class="btn bg-rosita">Ver ejercicio</a>
+                        </div>
                     </div>
-                </div>
                 </div>
 
                 <div class="col">
-                <div class="card h-100">
-                    <div class="card-body">
-                    <h5 class="card-title">Ejercicio 7: Adivinar el número secreto</h5>
-                    <a href="https://brissaflorest.github.io/Ev2_Eq6_DesarrolloWeb/Ejercicios/numerosecreto/index.html" target="_blank" class="btn bg-rosita">Ver ejercicio</a>
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Ejercicio 6: Laboratorio de funciones predeterminadas</h5>
+                            <a href="https://brissaflorest.github.io/Ev2_Eq6_DesarrolloWeb/Ejercicios/funciones/funciones.html"
+                                target="_blank" class="btn bg-rosita">Ver ejercicio</a>
+                        </div>
                     </div>
-                </div>
                 </div>
 
                 <div class="col">
-                <div class="card h-100">
-                    <div class="card-body">
-                    <h5 class="card-title">Ejercicio 8: Convertidor de sistemas numéricos</h5>
-                    <a href="https://brissaflorest.github.io/Ev2_Eq6_DesarrolloWeb/Ejercicios/Convertidor_de_numeros/index.html" target="_blank" class="btn bg-rosita">Ver ejercicio</a>
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Ejercicio 7: Adivinar el número secreto</h5>
+                            <a href="https://brissaflorest.github.io/Ev2_Eq6_DesarrolloWeb/Ejercicios/numerosecreto/index.html"
+                                target="_blank" class="btn bg-rosita">Ver ejercicio</a>
+                        </div>
                     </div>
-                </div>
                 </div>
 
                 <div class="col">
-                <div class="card h-100">
-                    <div class="card-body">
-                    <h5 class="card-title">Ejercicio 9: Calculadora de promedio y calificaciones</h5>
-                    <a href="https://brissaflorest.github.io/Ev2_Eq6_DesarrolloWeb/Ejercicios/Calculadora%20de%20promedios/index.html" target="_blank" class="btn bg-rosita">Ver ejercicio</a>
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Ejercicio 8: Convertidor de sistemas numéricos</h5>
+                            <a href="https://brissaflorest.github.io/Ev2_Eq6_DesarrolloWeb/Ejercicios/Convertidor_de_numeros/index.html"
+                                target="_blank" class="btn bg-rosita">Ver ejercicio</a>
+                        </div>
                     </div>
-                </div>
                 </div>
 
                 <div class="col">
-                <div class="card h-100">
-                    <div class="card-body">
-                    <h5 class="card-title">Ejercicio 10: Contador de votos</h5>
-                    <a href="https://brissaflorest.github.io/Ev2_Eq6_DesarrolloWeb/Ejercicios/Contador%20de%20votos/index.html" target="_blank" class="btn bg-rosita">Ver ejercicio</a>
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Ejercicio 9: Calculadora de promedio y calificaciones</h5>
+                            <a href="https://brissaflorest.github.io/Ev2_Eq6_DesarrolloWeb/Ejercicios/Calculadora%20de%20promedios/index.html"
+                                target="_blank" class="btn bg-rosita">Ver ejercicio</a>
+                        </div>
                     </div>
-                </div>
                 </div>
 
                 <div class="col">
-                <div class="card h-100">
-                    <div class="card-body">
-                    <h5 class="card-title">Ejercicio 11: Cambio de color</h5>
-                    <a href="https://brissaflorest.github.io/Ev2_Eq6_DesarrolloWeb/Ejercicios/CambioDeColor/color.html" target="_blank" class="btn bg-rosita">Ver ejercicio</a>
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Ejercicio 10: Contador de votos</h5>
+                            <a href="https://brissaflorest.github.io/Ev2_Eq6_DesarrolloWeb/Ejercicios/Contador%20de%20votos/index.html"
+                                target="_blank" class="btn bg-rosita">Ver ejercicio</a>
+                        </div>
                     </div>
-                </div>
                 </div>
 
                 <div class="col">
-                <div class="card h-100">
-                    <div class="card-body">
-                    <h5 class="card-title">Ejercicio 12: Cambiar propiedades del texto</h5>
-                    <a href="https://brissaflorest.github.io/Ev2_Eq6_DesarrolloWeb/Ejercicios/CambiarPropiedadesDeTexto/propiedad.html" target="_blank" class="btn bg-rosita">Ver ejercicio</a>
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Ejercicio 11: Cambio de color</h5>
+                            <a href="https://brissaflorest.github.io/Ev2_Eq6_DesarrolloWeb/Ejercicios/CambioDeColor/color.html"
+                                target="_blank" class="btn bg-rosita">Ver ejercicio</a>
+                        </div>
                     </div>
-                </div>
                 </div>
 
                 <div class="col">
-                <div class="card h-100">
-                    <div class="card-body">
-                    <h5 class="card-title">Ejercicio 13: Ocultar y mostrar un elemento con un botón</h5>
-                    <a href="https://brissaflorest.github.io/Ev2_Eq6_DesarrolloWeb/Ejercicios/OcultarElemento/ocultar.html" target="_blank" class="btn bg-rosita">Ver ejercicio</a>
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Ejercicio 12: Cambiar propiedades del texto</h5>
+                            <a href="https://brissaflorest.github.io/Ev2_Eq6_DesarrolloWeb/Ejercicios/CambiarPropiedadesDeTexto/propiedad.html"
+                                target="_blank" class="btn bg-rosita">Ver ejercicio</a>
+                        </div>
                     </div>
-                </div>
                 </div>
 
                 <div class="col">
-                <div class="card h-100">
-                    <div class="card-body">
-                    <h5 class="card-title">Ejercicio 14: Loader</h5>
-                    <a href="https://brissaflorest.github.io/Ev2_Eq6_DesarrolloWeb/Ejercicios/Loader/index.html" target="_blank" class="btn bg-rosita">Ver ejercicio</a>
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Ejercicio 13: Ocultar y mostrar un elemento con un botón</h5>
+                            <a href="https://brissaflorest.github.io/Ev2_Eq6_DesarrolloWeb/Ejercicios/OcultarElemento/ocultar.html"
+                                target="_blank" class="btn bg-rosita">Ver ejercicio</a>
+                        </div>
                     </div>
-                </div>
                 </div>
 
                 <div class="col">
-                <div class="card h-100">
-                    <div class="card-body">
-                    <h5 class="card-title">Ejercicio 15: Fondo Animado</h5>
-                    <a href="" target="_blank" class="btn bg-rosita">Ver ejercicio</a>
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Ejercicio 14: Loader</h5>
+                            <a href="https://brissaflorest.github.io/Ev2_Eq6_DesarrolloWeb/Ejercicios/Loader/index.html"
+                                target="_blank" class="btn bg-rosita">Ver ejercicio</a>
+                        </div>
                     </div>
                 </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Ejercicio 15: Fondo Animado</h5>
+                            <a href="https://brissaflorest.github.io/Ev2_Eq6_DesarrolloWeb/Ejercicios/fondoanimado/index.html" target="_blank" class="btn bg-rosita">Ver ejercicio</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -213,5 +373,6 @@
         <p><b>Blog creado con por Equipo 6 | UANL 2025</b></p>
     </footer>
 </body>
+
 
 </html>

@@ -1,33 +1,45 @@
 body {
-  background-color: #fffafc;
+  background-color: #fbfaff;
   font-family: 'Poppins', sans-serif;
 }
 
 h2 {
-  border-bottom: 2px dashed #ffc0cb;
+  border-bottom: 2px dashed #2CC295;
   padding-bottom: 5px;
 }
 
+.text-JAVASCRIPT {
+  color: #17876D;
+}
+
+.text-CONCEPTOS {
+  color: #391787;
+}
+
+.text-EJERCICIOS {
+  color: #54ACBF;
+}
+
 h3 {
-  border-bottom: 2px dashed #ff96c2; /* un poco más vivo */
+  border-bottom: 2px dashed #03624C;
   padding-bottom: 4px;
 }
 
 .text-rosita {
-  color: #ff91a4;
+  color: #0c969c;
 }
 
 .btn-outline-rosita {
-  color: #ff91a4;
-  border: 1px solid #ff91a4;
+  color: #0c969c;
+  border: 1px solid #0c969c;
   background-color: transparent;
   transition: all 0.3s ease;
 }
 
 .btn-outline-rosita:hover {
-  background-color: #ff91a4;
+  background-color: #0c969c;
   color: white;
-  box-shadow: 0 0 10px #ffcce0;
+  box-shadow: 0 0 10px #274d60;
 }
 
 .btn-kawaii {
@@ -41,20 +53,21 @@ h3 {
 }
 
 code {
-  background-color: #fff0f5;
+  background-color: #032f30;
   border-radius: 5px;
   display: block;
   padding: 10px;
   font-family: 'Courier New', monospace;
+  color: #0c969c;
 }
 
 a {
-  color: #ff96c2;
+  color: #2CC295;
   text-decoration: none;
 }
 
 a:hover {
-  color: #ff1493;
+  color: #08eea1;
   text-decoration: underline;
 }
 
@@ -64,18 +77,18 @@ a:hover {
   object-fit: cover;
   border: none;
   border-radius: 100%;
-  box-shadow: 0 4px 12px rgba(255, 150, 194, 0.6);
+  box-shadow: 0 4px 12px rgba(10, 112, 117, 0.6);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contenedor-imagen img:hover {
   transform: scale(1.1) rotate(3deg);
-  box-shadow: 0 8px 20px rgba(255, 150, 194, 0.9);
+  box-shadow: 0 8px 20px rgba(10, 112, 117, 0.9);
 }
 
 .bg-rosita {
-  background-color: #ffc0cb;
-  color: #d46b97;
+  background-color: #032f30;
+  color: #6ba3be;
   text-align: center;
   padding: 1rem 0;
   margin-top: 2rem;
@@ -85,13 +98,13 @@ a:hover {
 ::-webkit-scrollbar {width: 13px;}
 
 ::-webkit-scrollbar-track {
-    background: #ffc0cb;
+    background: #032f30;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #ff96c2;}
+    background: #0a7075;}
 
-::-webkit-scrollbar-thumb:hover {background: #d46b97;}
+::-webkit-scrollbar-thumb:hover {background: #0c969c;}
 
 
 /*VUELTA AL INDICE*/
@@ -111,16 +124,16 @@ a:hover {
 }
 
 .js-section {
-  background-color: #f0f8ff;
-  border-left: 5px solid #00bfff;
+  background-color: #031716;
+  border-left: 5px solid #0c969c;
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 2rem;
 }
 
 .js-code {
-  background-color: #272822;
-  color: #f8f8f2;
+  background-color: #031716;
+  color: #0c969c;
   font-family: 'Courier New', monospace;
   padding: 10px;
   border-radius: 5px;
@@ -129,12 +142,12 @@ a:hover {
 }
 
 .card-ejercicio {
-  border: 2px dashed #ff91a4;
+  border: 2px dashed #0a7075;
   border-radius: 10px;
   transition: transform 0.3s ease;
 }
 
 .card-ejercicio:hover {
   transform: scale(1.03);
-  box-shadow: 0 0 15px rgba(255, 150, 194, 0.4);
+  box-shadow: 0 0 15px rgba(10, 112, 117, 0.4);
 }
